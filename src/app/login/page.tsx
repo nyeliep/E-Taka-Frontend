@@ -144,15 +144,15 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-3/5 h-screen bg-orange-200 flex flex-col justify-center items-center">
+        <div className="w-3/5 h-screen bg-orange-200 flex flex-col justify-center items-center">
           <div className="text-center">
-            <h1 className="text-2xl mb-20">
+            <h1 className="text-2xl">
               <span className="text-orange-500">Welcome</span> to our{" "}
               <span className="text-orange-500">E-Waste</span> Recycling
               Platform
             </h1>
           </div>
-          <img src="images/home.png" alt="Home" className="w-5/6 sm:w-full" />
+          <img src="images/home.png" alt="Home" className="w-5/6 mt-10" />
         </div>
       </div>
     </>

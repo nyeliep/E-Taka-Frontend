@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const userLoggedIn = Boolean(cookie.get('sessionToken'));
     if (!userLoggedIn) {
-      router.push('/register');
+      router.push('/login');
     }
     else {
       setIsUserLoggedIn(userLoggedIn);

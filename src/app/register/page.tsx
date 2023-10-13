@@ -49,7 +49,7 @@ const Register = () => {
           <div className="flex justify-center">
             <div className="mb-3">
               <h4 className="text-4xl">Register</h4>
-              <p className="text-secondary text-sm mt-10">
+              <p className="text-secondary text-sm mt-10 pb-6">
                 Already have an account?{" "}
                 <Link
                   href="/login"
