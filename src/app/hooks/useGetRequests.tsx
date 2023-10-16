@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { getRequests } from "../utilities/utils";
+import { getRequests , deleteRequest} from "../utilities/utils";
 
 interface Requests {
   id: number;
@@ -28,6 +28,8 @@ const useGetRequests = () => {
       }
     })();
   }, []);
+
+  
 
   return { requests };
 };

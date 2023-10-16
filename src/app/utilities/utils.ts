@@ -1,3 +1,5 @@
+import { BASE_URL } from "../../../config";
+
 export interface LoginUser{
   email: string;
   password: string;
@@ -55,6 +57,58 @@ export const getRequests = async() => {
 
   }
 }
+
+
+export const editRequests = async(id:number) => {
+  try {
+      const response = await fetch('/api/edit-requests',{
+          method: 'PUT',
+      })
+      const result = await response.json();
+      return result;
+
+  } catch (error) {
+      return error;
+
+  }
+}
+
+export const deleteResource = async(id:number) => {
+  try {
+      const response = await fetch('/api/delete-requests',{
+          method: 'DELETE',
+
+          body: JSON.stringify(id),
+      })
+
+      const result = await response.json();
+      return result;
+
+  } catch (error) {
+      return error;
+
+  }
+}
+
+export async function deleteRequest(requestId:number) {
+  try {
+    const response = await fetch(`${BASE_URL}/collection/api/ewaste-requests/${requestId}`,{
+        method: 'DELETE',
+    })
+    const result = await response.json();
+    return result;
+
+} catch (error) {
+    return error;
+
+}
+}
+
+
+
+
+
+
 
 
 

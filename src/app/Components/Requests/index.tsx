@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import useGetRequests from "@/app/hooks/useGetRequests";
+import { deleteRequest } from "@/app/utilities/utils";
 
 type Request = {
   id: number;

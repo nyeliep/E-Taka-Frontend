@@ -1,25 +1,54 @@
 import { BASE_URL } from "../../../../config";
 
-export async function GET() {
-    try {
-        if (!BASE_URL) {
-          return new Response("Base url not found", {
-            status: 404,
-            statusText: "failed",
-          });
-        }
 
-        const response = await fetch(`${BASE_URL}/collection/api/ewaste-requests/`);
-        const result = await response.json();
-        return new Response(JSON.stringify(result), {
-          status: 200,
-          statusText: "success",
-        });
-      } catch (error: any) {
-        return new Response(error.message, {
-          status: 500,
-          statusText: "failed",
-        });
-      }
+export async function GET(
+    _request:Request,
+    {params}:{params:{request_id: number}}) {
+
+    console.log({params});
+
+    const request_id = params.request_id;
+
+
+    if(!BASE_URL){
+        return new Response('No movie base URL found',{
+         status: 404,
+         statusText:'failed'})
     }
+
+    try {
+        const response = await fetch (`${BASE_URL}/collection/api/ewaste-requests/${request_id}`,{
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json',
+
+
+            }
+        });
+
+        console.log(response)
+
+        const result = await response.json();
+
+        console.log(result)
+
+        return new Response(JSON.stringify(result),{
+            status: 204,
+            statusText:'success',
+
+        });
+
+    } catch (error:any) {
+        return new Response(error,{
+            status: 500,
+            statusText:'error'
+
+        })
+
+    }
+
+
+
+}
+
 
