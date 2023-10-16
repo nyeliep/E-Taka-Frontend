@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import cookie from 'cookiejs';
+import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 const Home = () => {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -17,7 +18,11 @@ const Home = () => {
     }
   }, []);
   return (
-    <div className="h-screen flex items-center justify-center bg-orange-100">
+
+  <div className="h-screen flex items-center justify-center bg-orange-100">
+      <Head>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
   <div className="text-center text-4xl custom-primary-text">
     {isUserLoggedIn ?
       'Welcome back!  🎉':

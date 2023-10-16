@@ -141,24 +141,3 @@ export const getOrder = async () => {
     throw new Error(error.message || 'Failed to fetch orders');
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
