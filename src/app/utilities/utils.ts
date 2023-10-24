@@ -59,42 +59,60 @@ export const getRequests = async() => {
 }
 
 
-export const editRequests = async(id:number) => {
-  try {
-      const response = await fetch('/api/edit-requests',{
-          method: 'PUT',
-      })
-      const result = await response.json();
-      return result;
+// export const editRequests = async(id:number, updatedData:any) => {
+//   try {
+//       const response = await fetch('/api/edit-requests',{
+//           method: 'PUT',
+//       })
+//       const result = await response.json();
+//       return result;
 
-  } catch (error) {
-      return error;
+//   } catch (error) {
+//       return error;
 
-  }
+//   }
+// }
+
+export interface Status {
+  status: string;
 }
 
-export const deleteResource = async(id:number) => {
+export const editRequests = async (id: number, status: Status) => {
   try {
-      const response = await fetch('/api/delete-requests',{
-          method: 'DELETE',
+    const response = await fetch(`/api/edit-requests/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(status),
+    });
+    
+    console.log(response)
+    if (!response.ok) {
+      throw new Error(`Request failed with status: ${response.status}`);
+    }
 
-          body: JSON.stringify(id),
-      })
+    const result = await response.json();
+    return result;
 
-      const result = await response.json();
-      return result;
-
-  } catch (error) {
-      return error;
-
+  } catch (error:any) {
+    return { error: error.message };
   }
-}
+};
 
-export async function deleteRequest(requestId:number) {
+
+
+export async function deleteRequest(id:number) {
   try {
-    const response = await fetch(`${BASE_URL}/collection/api/ewaste-requests/${requestId}`,{
+    const response = await fetch(`/api/delete-requests/${id}`,{
         method: 'DELETE',
+
+        body: JSON.stringify(id),
     })
+    console.log(response)
+    console.error(response)
+
+
     const result = await response.json();
     return result;
 
@@ -195,3 +213,11 @@ export const getOrder = async () => {
     throw new Error(error.message || 'Failed to fetch orders');
   }
 };
+
+
+
+
+
+
+
+

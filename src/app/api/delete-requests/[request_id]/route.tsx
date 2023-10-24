@@ -1,14 +1,12 @@
-import { BASE_URL } from "../../../../config";
+import { BASE_URL } from "../../../../../config";
 
-
-export async function GET(
+export async function DELETE(
     _request:Request,
     {params}:{params:{request_id: number}}) {
 
     console.log({params});
 
     const request_id = params.request_id;
-
 
     if(!BASE_URL){
         return new Response('No movie base URL found',{
@@ -26,29 +24,24 @@ export async function GET(
             }
         });
 
-        console.log(response)
-
         const result = await response.json();
-
         console.log(result)
-
         return new Response(JSON.stringify(result),{
             status: 204,
-            statusText:'success',
+            statusText:'no content',
 
         });
 
-    } catch (error:any) {
-        return new Response(error,{
-            status: 500,
-            statusText:'error'
 
-        })
+    } catch (error:any) {
+        return new Response(error)
 
     }
 
 
-
 }
+
+
+
 
 
