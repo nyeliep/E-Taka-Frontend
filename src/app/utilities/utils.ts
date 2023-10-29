@@ -1,53 +1,55 @@
 import { BASE_URL } from "../../../config";
 
-export interface LoginUser{
+export interface LoginUser {
   email: string;
   password: string;
-
 }
 export const loginUsers = async (loginUser: LoginUser) => {
   try {
-    const response = await fetch('/api/login-user', {
-      method: 'POST',
+    const response = await fetch("/api/login-user", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(loginUser),
     });
     const result = await response.json();
     return result;
-
-  } catch (error:any) {
+  } catch (error: any) {
     return error.message;
   }
 };
 
-
-
-
-
-
-export const getUsers = async() => {
+export const getUsers = async () => {
   try {
-      const response = await fetch('/api/get-users',{
-          method: 'GET',
-      })
-      const result = await response.json();
-      return result;
-
+    const response = await fetch("/api/get-users", {
+      method: "GET",
+    });
+    const result = await response.json();
+    return result;
   } catch (error) {
-      return error;
-
+    return error;
   }
-}
+};
 
-
-
+// export const getRequests = async (endpoint: any) => {
+//   try {
+//     const response = await fetch(BASE_URL + endpoint, {
+//       method: "GET",
+//       mode: "no-cors",
+//     });
+//     const result = await response.json();
+//     return result;
+//   } catch (error) {
+//     return error;
+//   }
+// };
 
 export const getRequests = async() => {
   try {
       const response = await fetch('/api/get-requests',{
           method: 'GET',
+          mode: 'cors'
       })
       const result = await response.json();
       return result;
@@ -57,21 +59,6 @@ export const getRequests = async() => {
 
   }
 }
-
-
-// export const editRequests = async(id:number, updatedData:any) => {
-//   try {
-//       const response = await fetch('/api/edit-requests',{
-//           method: 'PUT',
-//       })
-//       const result = await response.json();
-//       return result;
-
-//   } catch (error) {
-//       return error;
-
-//   }
-// }
 
 export interface Status {
   status: string;
@@ -80,58 +67,43 @@ export interface Status {
 export const editRequests = async (id: number, status: Status) => {
   try {
     const response = await fetch(`/api/edit-requests/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(status),
     });
-    
-    console.log(response)
+
     if (!response.ok) {
       throw new Error(`Request failed with status: ${response.status}`);
     }
 
     const result = await response.json();
-    return result;
 
-  } catch (error:any) {
+    return result;
+  } catch (error: any) {
     return { error: error.message };
   }
 };
 
+// export async function deleteRequest(id: number) {
+//   try {
+//     const response = await fetch(`/api/delete-requests/${id}`, {
+//       method: "DELETE",
 
+//       body: JSON.stringify(id),
+//     });
+//     console.log(response);
+//     console.error(response);
 
-export async function deleteRequest(id:number) {
-  try {
-    const response = await fetch(`/api/delete-requests/${id}`,{
-        method: 'DELETE',
-
-        body: JSON.stringify(id),
-    })
-    console.log(response)
-    console.error(response)
-
-
-    const result = await response.json();
-    return result;
-
-} catch (error) {
-    return error;
-
-}
-}
-
-
-
-
-
-
-
-
-
-
-
+//     const result = await response.json();
+//     console.log(result);
+//     console.error(result);
+//     return result;
+//   } catch (error) {
+//     return error;
+//   }
+// }
 
 export interface UserData {
   name: string;
@@ -143,81 +115,62 @@ export interface UserData {
 }
 
 export async function registerUser(userData: UserData) {
-
   try {
-
-    const response = await fetch('/api/register-user', {
-      method: 'POST',
+    const response = await fetch("/api/register-user", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(userData),
     });
     const result = await response.json();
     return result;
-
-  } catch (error:any) {
+  } catch (error: any) {
     return error.message;
   }
-};
-
-
-
-
+}
 
 export const getProducts = async () => {
-  const url = `./api/get-product`
+  const url = `./api/get-product`;
 
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const result = await response.json();
     return result;
-  } catch (error:any) {
-    throw new Error(error.message || 'Failed to fetch products');
+  } catch (error: any) {
+    throw new Error(error.message || "Failed to fetch products");
   }
 };
-
-
 
 export const getDelivery = async () => {
-  const url = `./api/get-deliveries`
+  const url = `./api/get-deliveries`;
 
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const result = await response.json();
     return result;
-  } catch (error:any) {
-    throw new Error(error.message || 'Failed to fetch deliveries');
+  } catch (error: any) {
+    throw new Error(error.message || "Failed to fetch deliveries");
   }
 };
-
-
 
 export const getOrder = async () => {
-  const url = `./api/get-orders`
+  const url = `./api/get-orders`;
 
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const result = await response.json();
     return result;
-  } catch (error:any) {
-    throw new Error(error.message || 'Failed to fetch orders');
+  } catch (error: any) {
+    throw new Error(error.message || "Failed to fetch orders");
   }
 };
-
-
-
-
-
-
-
-
