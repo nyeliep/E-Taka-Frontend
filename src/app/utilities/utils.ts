@@ -32,18 +32,6 @@ export const getUsers = async () => {
   }
 };
 
-// export const getRequests = async (endpoint: any) => {
-//   try {
-//     const response = await fetch(BASE_URL + endpoint, {
-//       method: "GET",
-//       mode: "no-cors",
-//     });
-//     const result = await response.json();
-//     return result;
-//   } catch (error) {
-//     return error;
-//   }
-// };
 
 export const getRequests = async() => {
   try {
@@ -86,24 +74,24 @@ export const editRequests = async (id: number, status: Status) => {
   }
 };
 
-// export async function deleteRequest(id: number) {
-//   try {
-//     const response = await fetch(`/api/delete-requests/${id}`, {
-//       method: "DELETE",
+export async function deleteRequest(id: number) {
+  try {
+    const response = await fetch(`/api/delete-requests/${id}`, {
+      method: "DELETE",
 
-//       body: JSON.stringify(id),
-//     });
-//     console.log(response);
-//     console.error(response);
+      body: JSON.stringify(id),
+    });
+    console.log(response);
+    console.error(response);
 
-//     const result = await response.json();
-//     console.log(result);
-//     console.error(result);
-//     return result;
-//   } catch (error) {
-//     return error;
-//   }
-// }
+    const result = await response.json();
+    console.log(result);
+    console.error(result);
+    return result;
+  } catch (error) {
+    return error;
+  }
+}
 
 export interface UserData {
   name: string;
@@ -174,3 +162,5 @@ export const getOrder = async () => {
     throw new Error(error.message || "Failed to fetch orders");
   }
 };
+
+
