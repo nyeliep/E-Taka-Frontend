@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useGetRequests from "../hooks/useGetRequests";
 import RequestCard from "../Atoms/RequestCard";
 import Layout from "../Components/Layout";
-import TopNav from "../Components/TopNav";
+
 
 const CollectionRequest = () => {
   const { requests} = useGetRequests();
@@ -26,7 +26,7 @@ const CollectionRequest = () => {
   return (
     <div>
       <Layout>
-        <TopNav />
+    
         <div className="ml-10 mr-10">
           <h1 className="mt-6 text-3xl">Requests</h1>
           <div className="flex space-x-36 mt-8 text-xl">

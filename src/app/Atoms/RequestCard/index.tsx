@@ -27,7 +27,7 @@ const RequestCard = ({ request }: { request: Request }) => {
       </div>
       <div className="flex flex-col">
         <div className='flex gap-36'>
-        <img  src='/images/phone8.jpeg' alt={request.ewaste_type} className="w-40 mb-4" />
+        {/* <img  src='/images/phone8.jpeg' alt={request.ewaste_type} className="w-40 mb-4" /> */}
           <div className='flex-col p-2'>
             <p className="text-gray-500 text-m">
               <h1 className='mb-2 text-gray-500 font-bold'>Requester</h1>

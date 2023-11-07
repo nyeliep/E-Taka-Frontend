@@ -114,7 +114,7 @@ const Request = () => {
         <table className="w-full">
           <thead className="shadow-xl">
             <tr>
-              <th className="px-6 py-4 text-left">Product</th>
+              <th className="px-6 py-4 text-left">Ewaste Type</th>
               <th className="px-6 py-4 text-left">QTY</th>
               <th className="px-6 py-4 text-left">Customer</th>
               <th className="px-6 py-4 text-left">Location</th>
@@ -130,11 +130,8 @@ const Request = () => {
                 className="border-b border-gray-200 shadow-xl"
               >
                 <td className="px-4 py-2 flex items-center">
-                  <img
-                    src="/images/laptop3.jpeg"
-                    alt={request.ewaste_type}
-                    className="w-32 h-20 object-cover mr-2 pt-6"
-                  />
+                {/* <td className="px-6 py-2">{request.image}</td> */}
+
                   <p className="pt-8">{request.ewaste_type}</p>
                 </td>
                 <td className="px-6 py-2">{request.quantity}</td>

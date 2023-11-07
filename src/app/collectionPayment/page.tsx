@@ -2,12 +2,11 @@
 import React, { useState } from 'react';
 import PaymentItem from '../Atoms/PaymentAtom';
 import Layout from '../Components/Layout';
-import TopNav from '../Components/TopNav';
 import useGetRequests from '../hooks/useGetRequests';
 
 const Payment = () => {
 
-  
+
   const [filter, setFilter] = useState('all');
   const { requests } = useGetRequests();
 
@@ -28,7 +27,7 @@ const Payment = () => {
 
   return (
     <Layout>
-      <TopNav />
+    
       <div className="container mx-auto py-10 justify-center">
         <h1 className="text-3xl font-semibold mb-4 ml-20">My Wallet</h1>
         <div className="flex justify-end space-x-4 mb-4 mr-10">
