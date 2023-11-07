@@ -9,7 +9,7 @@ export async function GET() {
       });
     }
 
-    const response = await fetch(`${BASE_URL}/collection/requests/`);
+    const response = await fetch(`${BASE_URL}/api/wastedisposal/`);
     const result = await response.json();
     return new Response(JSON.stringify(result), {
       status: 200,

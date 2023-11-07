@@ -10,6 +10,8 @@ import { getRequests } from "@/app/utilities/utils";
 
 interface Requests {
   id: number;
+  user:string,
+  waste_type: string
   ewaste_type: string;
   quantity: number;
   pickup_date: string;
@@ -118,8 +120,8 @@ const Request = () => {
               <th className="px-6 py-4 text-left">QTY</th>
               <th className="px-6 py-4 text-left">Customer</th>
               <th className="px-6 py-4 text-left">Location</th>
-              <th className="px-4 py-2 text-left">Status</th>
-              <th className="px-4 py-2 text-left">Payment</th>
+              {/* <th className="px-4 py-2 text-left">Status</th>
+              <th className="px-4 py-2 text-left">Payment</th> */}
               <th className="px-6 py-4 text-left">Action</th>
             </tr>
           </thead>
@@ -132,13 +134,13 @@ const Request = () => {
                 <td className="px-4 py-2 flex items-center">
                 {/* <td className="px-6 py-2">{request.image}</td> */}
 
-                  <p className="pt-8">{request.ewaste_type}</p>
+                  <p className="pt-8">{request.waste_type}</p>
                 </td>
                 <td className="px-6 py-2">{request.quantity}</td>
-                <td className="px-6 py-2">{request.requester_name}</td>
+                <td className="px-6 py-2">{request.user}</td>
                 <td className="px-6 py-2">{request.location}</td>
-                <td className="px-6 py-2">{request.status}</td>
-                <td className="px-6 py-2">{request.payment_status}</td>
+                {/* <td className="px-6 py-2">{request.status}</td>
+                <td className="px-6 py-2">{request.payment_status}</td> */}
                 <td className="">
                   <div className="flex flex-box">
                     <Button
