@@ -9,7 +9,7 @@ export async function GET() {
       });
     }
 
-    const response = await fetch(`${BASE_URL}/api/user/`);
+    const response = await fetch(`${BASE_URL}/api/user/`,{ cache: 'no-store' });
     const result = await response.json();
     return new Response(JSON.stringify(result), {
       status: 200,

@@ -13,6 +13,8 @@ export default async function handler(req, res) {
 
   // Set up your payment request parameters here
   const paymentData = {
+    amount:'',
+    phone:''
     // ... your payment data
   };
 

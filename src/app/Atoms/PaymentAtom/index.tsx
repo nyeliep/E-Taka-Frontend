@@ -29,7 +29,7 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
     <div className='w-full justify-center ml-10 mr-10'>
       <div className="bg-white border rounded-lg p-4 flex justify-between items-center">
         <div className='flex items-center justfy-center'>
-          {/* <img src='/images/phone5.jpeg' alt={ewaste_type} className="w-24 h-24 object-cover mr-4" /> */}
+          <img src='/images/phone5.jpeg' alt={ewaste_type} className="w-24 h-24 object-cover mr-4" />
           <div>
             <h2 className="text-xl font-semibold ml-20">{ewaste_type}</h2>
             <p className="text-gray-500 ml-20">Quantity: {quantity}</p>

@@ -9,7 +9,7 @@ export async function GET() {
       });
     }
 
-    const response = await fetch(`${BASE_URL}/api/orders/`);
+    const response = await fetch(`${BASE_URL}/api/orders/`,{ cache: 'no-store' });
     if (!response.ok) {
       return new Response("Failed to fetch orders", {
         status: 500,
