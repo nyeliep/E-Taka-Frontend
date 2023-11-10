@@ -109,6 +109,7 @@ const Request = () => {
   const deleteRequest = (id: number) => {
     fetch(`${BASE_URL}/collection/requests/${id}`, {
       method: "DELETE",
+    
     })
       .then(async (response) => {
         console.log("Server Response:", response);

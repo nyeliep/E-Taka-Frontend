@@ -11,7 +11,7 @@ export async function GET() {
 
 
 
-    const response = await fetch(`${BASE_URL}/collection/requests/`, { cache: 'no-store' });
+    const response = await fetch(`${BASE_URL}/collection/requests/`, { cache: 'no-cache' });
     const result = await response.json();
     return new Response(JSON.stringify(result), {
       status: 200,
