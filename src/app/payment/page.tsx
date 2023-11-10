@@ -32,22 +32,8 @@ const PaymentPage = () => {
   return (
     <EcommerceLayout>
       <div className="overflow-hidden">
-        <div className="flex items-center justify-end">
-          <MdAccountCircle className="text-black mr-700 text-5xl mt-2" />
-        </div>
-        <div
-          className="relative mt- ml-20 mt-[-40px] rounded-6xl"
-          style={{ width: "5400px" }}
-        >
-          <input
-            type="text"
-            placeholder="Search..."
-            className="py-4 pl-[42px] pr-[1100px] border rounded-lg border-black font-light focus:outline-none"
-          />
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <ImSearch className="text-darkGreen text-2xl" />
-          </div>
-        </div>
+
+    
         <div className="text-center items-center flex justify-center mt-12">
           <h1 className="text-3xl font-bold">Payment</h1>
         </div>

@@ -23,22 +23,7 @@ const DeliveryPage = () => {
   return (
     <EcommerceLayout>
       <div className='overflow-hidden'>
-        <div className='flex items-center justify-end'>
-          <MdAccountCircle className='text-black mr-7 text-5xl mt-2' />
-        </div>
-
-        <div className='relative mt-[1px] ml-10 mt-[-50px] rounded-6xl' style={{ width: '5400px' }}>
-          <input
-            type='text'
-            placeholder='Search...'
-            className='py-4 pl-[42px] pr-[1100px] border rounded-lg border-black font-light focus:outline-none'
-          />
-          <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-            <div className='flex items-center justify-center rounded-md shadow-md bg-white'>
-              <ImSearch className='text-darkGreen text-2xl' />
-            </div>
-          </div>
-        </div>
+    
 
         <div className='text-center items-center flex justify-center mt-12'>
           <p className='text-3xl font-bold'>Delivery</p>

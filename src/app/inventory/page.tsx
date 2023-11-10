@@ -12,22 +12,6 @@ const InventoryPage = () => {
   return (
     <EcommerceLayout>
       <div className="overflow-hidden">
-        <div className="flex items-center justify-end">
-          <MdAccountCircle className="text-black mr-400 text-5xl  mt-4" />{" "}
-        </div>
-        <div
-          className="relative mt- ml-20 mt-[-40px] rounded-6xl"
-          style={{ width: "3400px" }}
-        >
-          <input
-            type="text"
-            placeholder="Search..."
-            className="py-4 pl-[42px] pr-[1100px] border rounded-lg border-black font-light focus:outline-none"
-          />
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <ImSearch className="text-darkGreen text-2xl" />
-          </div>
-        </div>
 
         <div className="flex justify-center items-center h-15vh mt-6">
           <div className="flex items-center mt-12">

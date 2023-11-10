@@ -1,36 +1,42 @@
 import React from 'react';
 
 const TopCards = () => {
+
   return (
+    <div>
+      
+    <div className='grid lg:grid-cols-5 gap-4 p-4'>
 
-    <div className='flex gap-20 m-10 justify-between mt-20'>
-      <h1 className='text-4xl ml-10 font-bold '>Overview</h1>
-      <div className='lg:col-span-2 col-span-1 bg-white flex justify-between border p-4 rounded-lg ring-gray-200 ring-2 shadow-xl  ' style={{width:"30vh", height:"15vh"}}>
-        <div className='flex flex-col w-full pb-4 text-center mt-6'>
-        <p className='text-gray-600'>Daily Expenditure</p>
-          <p className='text-2xl font-bold'>20,000</p>
-
+        <div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>Ksh 7,846</p>
+                <p className='text-gray-600'>Daily Revenue</p>
+            </div>
+            <p className='bg-green-200 flex justify-center items-center p-2 rounded-lg'>
+                <span className='text-green-700 text-lg'>+18%</span>
+            </p>
         </div>
-
-      </div>
-      <div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-64 border p-4 rounded-lg ring-gray-200 ring-2 shadow-xl'  style={{width:"30vh", height:"15vh"}}>
-        <div className='flex flex-col w-full pb-4 text-center  mt-6'>
-        <p className='text-gray-600'>Fullfilled Requests</p>
-          <p className='text-2xl font-bold'>200</p>
-
+        <div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>Ksh 34,370,876</p>
+                <p className='text-gray-600'>YTD Revenue</p>
+            </div>
+            <p className='bg-green-200 flex justify-center items-center p-2 rounded-lg'>
+                <span className='text-green-700 text-lg'>+11%</span>
+            </p>
         </div>
-
-      </div>
-      <div className='lg:col-span-1 bg-white flex justify-between w-64 border p-4 rounded-lg ring-gray-200 ring-2 shadow-xl'  style={{width:"30vh", height:"15vh"}}>
-        <div className='flex flex-col w-full pb-4 text-center  mt-6'>
-               <p className='text-gray-600'>Failed Requests</p>
-          <p className='text-2xl font-bold'>200</p>
-
+        <div className='bg-white flex justify-between w-full border p-4 rounded-lg'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold'>1,137</p>
+                <p className='text-gray-600'>Customers</p>
+            </div>
+            <p className='bg-green-200 flex justify-center items-center p-2 rounded-lg'>
+                <span className='text-green-700 text-lg'>+17%</span>
+            </p>
         </div>
-
-      </div>
     </div>
-  );
+    </div>
+  )
 };
 
 export default TopCards;

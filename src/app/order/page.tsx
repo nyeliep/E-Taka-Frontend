@@ -22,24 +22,7 @@ const OrderPage = () => {
   return (
     <EcommerceLayout>
       <div className="flex flex-col items-center justify-center mt-12">
-        <div className="flex items-center justify-end ">
-          <MdAccountCircle className="text-black mr-[-900px] text-5xl mt-[-40px]" />
-        </div>
-
-        <div
-          className="relative mr-[650px] mt-[-30px] ml-[100px] rounded-6xl"
-          style={{ width: "900px" }}
-        >
-          <input
-            type="text"
-            placeholder="Search..."
-            className="py-4 pl-[42px] pr-[1100px] border rounded-lg border-black font-light focus:outline-none"
-          />
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <ImSearch className="text-darkGreen text-2xl" />
-          </div>
-        </div>
-
+       
         <div className="w-[1300px] flex justify-between mt-12">
           <button className="bg-white shadow-xl w-56 h-28 p-4 border border-gray-300 rounded">
             <h1 className="text-3xl">30</h1>
