@@ -1,6 +1,7 @@
 import { BASE_URL } from "../../../../config";
 
 export async function GET() {
+  
   try {
     if (!BASE_URL) {
       return new Response("Base url not found", {
@@ -11,7 +12,7 @@ export async function GET() {
 
 
 
-    const response = await fetch(`${BASE_URL}/collection/requests/`, { cache: 'no-cache' });
+    const response = await fetch(`${BASE_URL}/collection/requests/`, { cache: 'no-store' });
     const result = await response.json();
     return new Response(JSON.stringify(result), {
       status: 200,

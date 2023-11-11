@@ -45,24 +45,16 @@ const Request = () => {
   const [editedStatus, setEditedStatus] = useState<string>("");
   const [editedPaymentStatus, setEditedPaymentStatus] = useState<string>("");
 
-  const fetchData = async () => {
-    try {
-      const fetchedRequests = await getRequests();
-      setRequests(fetchedRequests);
-    } catch (error) {
-      console.error('Failed to fetch requests:', error);
-    }
-  };
-
   useEffect(() => {
-
-    fetchData();
-
-    const intervalId = setInterval(fetchData, 5000);
-
-    return () => clearInterval(intervalId);
+    (async () => {
+      try {
+        const fetchedRequests = await getRequests();
+        setRequests(fetchedRequests);
+      } catch (error) {
+        console.error("Failed to fetch requests:", error);
+      }
+    })();
   }, []);
-  
 
   const updateRequest = (
     id: number | null,
