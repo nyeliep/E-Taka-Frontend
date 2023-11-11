@@ -1,7 +1,7 @@
 import { BASE_URL } from "../../../../config";
 
 export async function GET() {
-  
+
   try {
     if (!BASE_URL) {
       return new Response("Base url not found", {
