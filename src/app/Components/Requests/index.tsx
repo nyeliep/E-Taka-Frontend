@@ -45,16 +45,24 @@ const Request = () => {
   const [editedStatus, setEditedStatus] = useState<string>("");
   const [editedPaymentStatus, setEditedPaymentStatus] = useState<string>("");
 
+  const fetchData = async () => {
+    try {
+      const fetchedRequests = await getRequests();
+      setRequests(fetchedRequests);
+    } catch (error) {
+      console.error('Failed to fetch requests:', error);
+    }
+  };
+
   useEffect(() => {
-    (async () => {
-      try {
-        const fetchedRequests = await getRequests();
-        setRequests(fetchedRequests);
-      } catch (error) {
-        console.error("Failed to fetch requests:", error);
-      }
-    })();
+
+    fetchData();
+
+    const intervalId = setInterval(fetchData, 5000);
+
+    return () => clearInterval(intervalId);
   }, []);
+  
 
   const updateRequest = (
     id: number | null,
@@ -109,7 +117,7 @@ const Request = () => {
   const deleteRequest = (id: number) => {
     fetch(`${BASE_URL}/collection/requests/${id}`, {
       method: "DELETE",
-    
+
     })
       .then(async (response) => {
         console.log("Server Response:", response);
