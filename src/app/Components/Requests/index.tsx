@@ -32,6 +32,7 @@ const showToast = (message: string, type: any) => {
 const Request = () => {
   const [requests, setRequests] = useState<Requests[]>([]);
   const { deleteRequestById } = useDeleteRequest();
+  const sortedRequests = [...requests].sort((a, b) => b.id - a.id);
 
 
 
@@ -160,7 +161,7 @@ const Request = () => {
             </tr>
           </thead>
           <tbody>
-            {requests.map((request) => (
+            {sortedRequests.map((request) => (
               <tr
                 key={request.id}
                 className="border-b border-gray-200 shadow-xl"

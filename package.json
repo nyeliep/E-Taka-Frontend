@@ -13,6 +13,8 @@
     "@blueprintjs/core": "^5.5.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@syncfusion/ej2-react-calendars": "^23.1.41",
+    "@syncfusion/ej2-react-schedule": "^23.1.44",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
