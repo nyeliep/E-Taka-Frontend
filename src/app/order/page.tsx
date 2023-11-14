@@ -22,7 +22,7 @@ const OrderPage = () => {
   return (
     <EcommerceLayout>
       <div className="flex flex-col items-center justify-center mt-12">
-       
+
         <div className="w-[1300px] flex justify-between mt-12">
           <button className="bg-white shadow-xl w-56 h-28 p-4 border border-gray-300 rounded">
             <h1 className="text-3xl">30</h1>

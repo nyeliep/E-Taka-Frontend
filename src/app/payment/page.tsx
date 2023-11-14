@@ -33,7 +33,7 @@ const PaymentPage = () => {
     <EcommerceLayout>
       <div className="overflow-hidden">
 
-    
+
         <div className="text-center items-center flex justify-center mt-12">
           <h1 className="text-3xl font-bold">Payment</h1>
         </div>
@@ -57,34 +57,13 @@ const PaymentPage = () => {
           <p className="text-lg text-[#555F7E] font-medium">Date</p>
           <p className="text-lg text-[#555F7E] font-medium">Status</p>
         </div>
-        <div className="text-center w-150vh flex ml-[100px] gap-[210px] mt-12">
-          <p className="text-lg">Linet Musembi</p>
-          <p className="text-lg">Microwave</p>
-          <p>Ksh.4000</p>
-          <p className="ml-[60px]">Sep 25,2023</p>
-          <p className="ml-[30px] text-[#007F56]">Paid</p>
-        </div>
-        <div className="text-center w-150vh flex ml-[100px] gap-[210px] mt-12">
-          <p className="text-lg">Linet Musembi</p>
-          <p className="text-lg">Microwave</p>
-          <p>Ksh.4000</p>
-          <p className="ml-[60px]">Sep 25,2023</p>
-          <p className="ml-[30px] text-[#007F56]">Paid</p>
-        </div>
-        <div className="text-center w-150vh flex ml-[100px] gap-[210px] mt-12">
-          <p className="text-lg">Linet Musembi</p>
-          <p className="text-lg">Microwave</p>
-          <p>Ksh.4000</p>
-          <p className="ml-[60px]">Sep 25,2023</p>
-          <p className="ml-[30px] text-[#007F56]">Paid</p>
-        </div>
-        <div className="text-center w-150vh flex ml-[100px] gap-[210px] mt-12">
-          <p className="text-lg">Linet Musembi</p>
-          <p className="text-lg">Microwave</p>
-          <p>Ksh.4000</p>
-          <p className="ml-[60px]">Sep 25,2023</p>
-          <p className="ml-[30px] text-[#007F56]">Paid</p>
-        </div>
+        <div className='text-center mt-4'>
+            <p className='text-lg font-medium mt-12'>No Payments have made yet</p>
+          </div>
+
+
+
+
       </div>
     </EcommerceLayout>
   );

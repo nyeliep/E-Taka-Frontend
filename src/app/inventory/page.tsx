@@ -84,11 +84,6 @@ const InventoryPage = () => {
             >
               <div className="flex items-center gap-8">
                 <div className="w-24 h-24">
-                  <img
-                    src={`images/tv.jpg`}
-                    alt="Product Image"
-                    className="w-full h-full"
-                  />
                 </div>
                 <div className="border-l border-black h-50"></div>
                 <div className="flex flex-col ml-0">
