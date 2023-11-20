@@ -192,7 +192,7 @@ const Request = () => {
                       intent="danger"
                       onClick={() => deleteRequest(request.id)}
                     >
-                      Delete Request
+                      Decline Request
                     </Button>
                   </div>
                 </td>
